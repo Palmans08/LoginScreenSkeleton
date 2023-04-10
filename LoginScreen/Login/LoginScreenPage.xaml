@@ -1,0 +1,87 @@
+﻿<Page x:Class="LoginScreen.Login.LoginScreenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LoginScreen.Login"
+      mc:Ignorable="d" 
+      d:DesignHeight="520" d:DesignWidth="800"
+      Title="LoginScreenPage">
+
+    <Grid>
+        <!--Example-->
+        <!--<Grid.Background>-->
+        <!--<ImageBrush ImageSource="..\Images\login_background.jpg" Opacity="0.4"/> -->
+        <!--</Grid.Background> -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--Content-->
+        <StackPanel Grid.Column="1">
+            <!--Place for a logo for example-->
+            <!--<Image  Width="400" Height="134" Source="\Images\logo.png" VerticalAlignment = "Top" Margin="0 10 0 0"/>-->
+            <TextBlock Text="Login"
+                       Width="400"
+                       Height="134"
+                       Foreground="White"
+                       TextAlignment="Center"
+                       FontSize="36"
+                       Padding="0 40"/>
+            <TextBlock x:Name="txtUsername"
+                       Text="Username"
+                       Margin="0 40 0 10"
+                       Foreground="White"/>
+
+            <TextBox x:Name="txbUsername"
+                     Padding="7"
+                     Background="Transparent"
+                     Foreground="White"
+                     KeyDown="txbUsername_KeyDown"/>
+
+            <TextBlock x:Name="txtPassword"
+                       Text="Password"
+                       Margin="0 10 0 10"
+                       Foreground="white"/>
+
+            <PasswordBox x:Name="psbPassword"
+                         Padding="7"
+                         Background="Transparent"
+                         Foreground="White"
+                         KeyDown="psbPassword_KeyDown"/>
+
+            <TextBlock x:Name="txtErrorMessage"
+                       Margin="0 15"
+                       Foreground="#f00"
+                       HorizontalAlignment="Center"/>
+
+            <Button x:Name="btnLogin"
+                    Content="LOG IN"
+                    Width="200"
+                    Height="30"
+                    Foreground="White"
+                    Background="#39f"
+                    Click="btnLogin_Click"/>
+
+            <Button x:Name="btnForgotPassword"
+                    Style="{StaticResource btnTransparentHoverHand}"
+                    Content="Forgot password?"
+                    HorizontalAlignment="Left"
+                    Width="150"
+                    Height="25"
+                    Margin="0 10"
+                    Click="btnForgotPassword_Click">
+            </Button>
+
+            <Button x:Name="btnCreateNewAcc"
+                    Style="{StaticResource btnTransparentHoverHand}"
+                    Content="Create new account"
+                    Width="150"
+                    Height="25"
+                    HorizontalAlignment="Left"
+                    Click="btnCreateNewAcc_Click">
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
